@@ -1,2 +1,7 @@
 npm init -- for creating package.json
 touch gitignore file for ignoring npm modules
+npm i nodemon
+inside scirpt 
+
+dev:npx nodemon src/index.json
+bodyparser

@@ -1,0 +1,2 @@
+npm init -- for creating package.json
+touch gitignore file for ignoring npm modules

@@ -4,8 +4,9 @@ const problemRouter = require('./problems.routes');
 
 const v1Router = express.Router();
 
-v1Router.use('/problems', problemRouter,v1Router.get('/problemRout',function (req,res){
-    return res.json({message:"we are at probelm Route"});
-}));
+//If any request comes and route starts with /problems,we map to problemRouter
+
+
+v1Router.use('/problems', problemRouter);
 
 module.exports = v1Router;

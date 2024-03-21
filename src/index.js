@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+//If any request comes and route starts with /api,we map to api router
 app.use('/api', apiRouter);
 
 app.listen(PORT, () => {

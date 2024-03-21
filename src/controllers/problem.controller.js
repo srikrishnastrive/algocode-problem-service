@@ -6,24 +6,38 @@ function pingProblemController(req, res) {
 }
 
 function addProblem (req,res){
-    return res.json({ message: 'add Controller' });
+    return res.status(501).json({
+        message:"Not Implemneted"
+    })
 }
 
 function getProblems (req,res){
+    return res.status(501).json({
+        message:"Not Implemneted"
+    })
 
 }
 
 function getProblem (req,res){
 
+    return res.status(501).json({
+        message:"Not Implemneted"
+    })
 }
 
 
 
 function deleteProblem(req,res){
+    return res.status(501).json({
+        message:"Not Implemneted"
+    })
 
 }
 
 function updateProblem (req,res){
+    return res.status(501).json({
+        message:"Not Implemneted"
+    })
 
 }
 

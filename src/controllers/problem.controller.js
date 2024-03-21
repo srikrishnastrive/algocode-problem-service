@@ -1,3 +1,5 @@
+const {StatusCodes} = require('http-status-codes');
+
 
 
 function pingProblemController(req, res) {
@@ -6,13 +8,13 @@ function pingProblemController(req, res) {
 }
 
 function addProblem (req,res){
-    return res.status(501).json({
+    return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
         message:"Not Implemneted"
     })
 }
 
 function getProblems (req,res){
-    return res.status(501).json({
+    return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
         message:"Not Implemneted"
     })
 
@@ -20,7 +22,7 @@ function getProblems (req,res){
 
 function getProblem (req,res){
 
-    return res.status(501).json({
+    return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
         message:"Not Implemneted"
     })
 }
@@ -28,17 +30,16 @@ function getProblem (req,res){
 
 
 function deleteProblem(req,res){
-    return res.status(501).json({
+    return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
         message:"Not Implemneted"
     })
 
 }
 
 function updateProblem (req,res){
-    return res.status(501).json({
+    return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
         message:"Not Implemneted"
     })
-
 }
 
 module.exports = {

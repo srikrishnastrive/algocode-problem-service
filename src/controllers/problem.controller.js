@@ -6,12 +6,16 @@ function pingProblemController(req, res) {
     return res.json({ message: 'Ping Controller' });
 }
 
-function addProblem (req,res){
+
+//it will push to the last middleware 
+function addProblem (req,res,next){
    try{
         throw NotImplemented("addProblem")
    }
    catch(error){
         next(error);
+        //next middle ware is error handle in the index.js
+        
    }
 }
 

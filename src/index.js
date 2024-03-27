@@ -18,7 +18,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api', apiRouter);
 
 
-//last middleware if any error comes
+//last middleware if any error comes 
+//we are registering the last middleware after regstering all the middlewares
 app.use(errorHandler)
 
 app.listen(PORT, () => {

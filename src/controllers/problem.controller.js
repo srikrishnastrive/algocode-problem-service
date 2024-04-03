@@ -19,33 +19,52 @@ function addProblem (req,res,next){
    }
 }
 
-function getProblems (req,res){
-    return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
-        message:"Not Implemneted"
-    })
+function getProblems (req,res,next){
+    try{
+        throw NotImplemented("get Problems")
+   }
+   catch(error){
+        next(error);
+        //next middle ware is error handle in the index.js
+        
+   }
 
 }
 
-function getProblem (req,res){
-
-    return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
-        message:"Not Implemneted"
-    })
+function getProblem (req,res,next){
+        try{
+            throw NotImplemented("get Problem")
+       }
+       catch(error){
+            next(error);
+            //next middle ware is error handle in the index.js
+            
+       }
 }
 
 
 
-function deleteProblem(req,res){
-    return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
-        message:"Not Implemneted"
-    })
+function deleteProblem(req,res,next){
+    try{
+        throw NotImplemented("delete Problem")
+   }
+   catch(error){
+        next(error);
+        //next middle ware is error handle in the index.js
+        
+   }
 
 }
 
-function updateProblem (req,res){
-    return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
-        message:"Not Implemneted"
-    })
+function updateProblem (req,res,next){
+    try{
+        throw NotImplemented("delete Problem")
+   }
+   catch(error){
+        next(error);
+        //next middle ware is error handle in the index.js
+        
+   }
 }
 
 module.exports = {

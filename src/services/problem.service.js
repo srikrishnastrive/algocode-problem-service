@@ -1,3 +1,4 @@
+const { Problem } = require("../models");
 const sanitizedMarkdownContent = require("../utils/markdownSanitizer");
 
 
@@ -22,11 +23,27 @@ class problemService {
             console.log(error)
             throw error;
         }
-        
-
-
          
     }
+
+    async getAllProblems(){
+        try{
+            //const problems = await (new ProblemRepostitory()).getAllProblems //instead of constructor
+            const problems = await this.problemRepository.getAllProblems();
+            return problems;
+        }
+        catch(error){
+            console.log(error);
+            throw error;
+
+        }
+    }
+
+   async getProblem(problemId){
+    console.log(problemId);
+    const problem = await this.problemRepository.getProblem(problemId);
+    return problem;
+   }
 }
 
 module.exports = problemService

@@ -11,7 +11,7 @@ const problemRouter = express.Router();
 // problemRouter.put('/:id', problemController.updateProblem);
 
 problemRouter.get('/get', problemController.getProblems); // Unique pattern for getProblems
-problemRouter.get('/detail/:id', problemController.getProblem); // Unique pattern for getProblem
+problemRouter.get('/:id', problemController.getProblem); // Unique pattern for getProblem
 problemRouter.post('/add', problemController.addProblem);
 problemRouter.delete('/:id', problemController.deleteProblem);
 problemRouter.put('/:id', problemController.updateProblem);

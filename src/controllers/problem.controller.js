@@ -33,9 +33,16 @@ async function addProblem (req,res,next){
    }
 }
 
-function getProblems (req,res,next){
+async function getProblems (req,res,next){
     try{
-        throw NotImplemented("get Problems")
+     //    throw NotImplemented("get Problems")
+     const response = await problemService.getAllProblems();
+     return res.status(StatusCodes.OK).json({
+          success:true,
+          message:"Successfully fetched all the problems",
+          error : {},
+          data:response
+     })
    }
    catch(error){
         next(error);
@@ -45,15 +52,20 @@ function getProblems (req,res,next){
 
 }
 
-function getProblem (req,res,next){
-        try{
-            throw NotImplemented("get Problem")
-       }
-       catch(error){
-            next(error);
-            //next middle ware is error handle in the index.js
-            
-       }
+async function getProblem (req,res,next){
+     try{
+          console.log(req.params.id)
+          const response = await problemService.getProblem(req.params.id);
+          return res.status(StatusCodes.OK).json({
+               success:true,
+               message:"Successfully fetched  the problem",
+               error : {},
+               data:response
+          })
+     }
+     catch(error){
+          next(error);   
+     }
 }
 
 

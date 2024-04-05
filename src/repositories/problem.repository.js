@@ -4,6 +4,7 @@ const { Problem } = require("../models");
 class ProblemRepository {
     async createProblem(problemData){
         try {
+          
             const problem = await Problem.create({
                 title: problemData.title,
                 description : problemData.description,
@@ -15,6 +16,7 @@ class ProblemRepository {
         }
         catch(error){
             console.log(error);
+            throw error;
         }
     }
 

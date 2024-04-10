@@ -7,7 +7,7 @@ const { StatusCodes } = require('http-status-codes');
 const problemService = new ProblemService(new ProblemRepository());
 
 function pingProblemController(req, res) {
-    console.log("in ping controller");
+   
     return res.json({ message: 'Ping Controller' });
 }
 
@@ -16,7 +16,7 @@ function pingProblemController(req, res) {
 async function addProblem (req,res,next){
    try{
        // throw NotImplemented("addProblem")
-       console.log("Incoming request body",req.body)
+       
        const newProblem = await problemService.createProblem(req.body);
        return res.status(StatusCodes.CREATED).json({
           success:true,
@@ -54,7 +54,7 @@ async function getProblems (req,res,next){
 
 async function getProblem (req,res,next){
      try{
-          console.log(req.params.id)
+        
           const response = await problemService.getProblem(req.params.id);
           return res.status(StatusCodes.OK).json({
                success:true,
@@ -81,7 +81,6 @@ async function deleteProblem(req,res,next){
      })
    }
    catch(error){
-    
      next(error);
         
    }

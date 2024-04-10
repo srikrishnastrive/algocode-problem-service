@@ -13,7 +13,7 @@ const problemRouter = express.Router();
 problemRouter.get('/get', problemController.getProblems); // Unique pattern for getProblems
 problemRouter.get('/:id', problemController.getProblem); // Unique pattern for getProblem
 problemRouter.post('/add', problemController.addProblem);
-problemRouter.delete('/:id', problemController.deleteProblem);
+problemRouter.delete('/:id', problemController.deleteProblem,);
 problemRouter.put('/:id', problemController.updateProblem);
 
 //if any requests comesand route continues with /ping, we map it to pingProblemController

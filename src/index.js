@@ -4,8 +4,8 @@ const bodyParser = require('body-parser');
 const apiRouter = require('./routes');
 const errorHandler = require('./utils/errorHandler');
 const connectToDB = require('./config/db.config');
-
 const { PORT } = require('./config/server.config');
+const logger = require('./config/logger.config');
 
 
 
@@ -17,6 +17,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //If any request comes and route starts with /api,we map to api router
 app.use('/api', apiRouter);
+
+app.get('/ping', (req, res) => {
+    // logger.error("ping error logs for ping controller",)
+    logger.error("ping error logs for ping controller");
+    return res.json({message: 'Problem Service is alive'});
+});
 
 
 //last middleware if any error comes 

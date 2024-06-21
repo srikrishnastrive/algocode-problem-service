@@ -17,8 +17,9 @@ function pingProblemController(req, res) {
 async function addProblem (req,res,next){
    try{
        // throw NotImplemented("addProblem")
-       
+       console.log(req.body);
        const newProblem = await problemService.createProblem(req.body);
+       console.log(newProblem);
        return res.status(StatusCodes.CREATED).json({
           success:true,
           message: 'Successfully created a new problem',

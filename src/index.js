@@ -29,8 +29,8 @@ app.get('/ping', (req, res) => {
 //we are registering the last middleware after regstering all the middlewares
 app.use(errorHandler)
 
-app.listen(PORT, async () => {
-    console.log(`Server started at PORT : ${PORT}`);
+app.listen(4000, async () => {
+    console.log(`Server started at PORT : ${4000}`);
     await connectToDB();
     console.log("connected to server successfully")
    
